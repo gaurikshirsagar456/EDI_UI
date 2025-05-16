@@ -111,7 +111,7 @@ const Navbar = () => {
             userSelect: "none",
           }}
         >
-          Login ▼
+          Login
         </button>
 
         {showDropdown && (
