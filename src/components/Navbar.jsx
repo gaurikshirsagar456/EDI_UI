@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ isAdminLoggedIn, isVoterLoggedIn, onLogout }) => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [loggedInRole, setLoggedInRole] = useState("");
   const navigate = useNavigate();
   const dropdownRef = useRef();
 
@@ -22,16 +21,16 @@ const Navbar = () => {
   };
 
   const handleLogin = (role) => {
-    setLoggedInRole(role);
     setShowDropdown(false);
     if (role === "admin") {
-      navigate("/admin-dashboard");
+      navigate("/admin");
     } else if (role === "voter") {
       navigate("/survey");
     }
   };
 
-  const handleHomeClick = () => {
+  const handleLogout = () => {
+    onLogout();
     navigate("/");
   };
 
@@ -48,10 +47,8 @@ const Navbar = () => {
         position: "relative",
       }}
     >
-      {/* Left spacer */}
       <div style={{ flex: 1 }}></div>
 
-      {/* Center title */}
       <h1
         style={{
           margin: 0,
@@ -65,7 +62,6 @@ const Navbar = () => {
         Exit Poll
       </h1>
 
-      {/* Right side - Home and Login */}
       <div
         style={{
           flex: 1,
@@ -77,42 +73,39 @@ const Navbar = () => {
         }}
         ref={dropdownRef}
       >
-        {loggedInRole && (
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              handleHomeClick();
-            }}
+        {(isAdminLoggedIn || isVoterLoggedIn) ? (
+          <button
+            onClick={handleLogout}
             style={{
+              backgroundColor: "transparent",
+              border: "1.5px solid white",
+              borderRadius: "4px",
               color: "white",
-              textDecoration: "none",
-              fontWeight: "600",
+              padding: "6px 12px",
               cursor: "pointer",
+              fontWeight: "600",
               userSelect: "none",
-              padding: 0,
-              border: "none",
             }}
           >
-            Home
-          </a>
+            Logout
+          </button>
+        ) : (
+          <button
+            onClick={handleLoginClick}
+            style={{
+              backgroundColor: "transparent",
+              border: "1.5px solid white",
+              borderRadius: "4px",
+              color: "white",
+              padding: "6px 12px",
+              cursor: "pointer",
+              fontWeight: "600",
+              userSelect: "none",
+            }}
+          >
+            Login
+          </button>
         )}
-
-        <button
-          onClick={handleLoginClick}
-          style={{
-            backgroundColor: "transparent",
-            border: "1.5px solid white",
-            borderRadius: "4px",
-            color: "white",
-            padding: "6px 12px",
-            cursor: "pointer",
-            fontWeight: "600",
-            userSelect: "none",
-          }}
-        >
-          Login
-        </button>
 
         {showDropdown && (
           <div
