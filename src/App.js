@@ -7,6 +7,9 @@ import ThankYou from "./components/ThankYou";
 import ChartsPage from "./admin/ChartsPage";
 import HomePage from "./home/home";
 import AdminDashboard from "./admin/AdminDashboard";  // Import AdminDashboard here
+import AdminLogin from "./admin/AdminLogin"; // Import AdminLogin here
+import Result from "./admin/Result"; // Import Results here
+
 
 import "./styles.css";
 
@@ -38,8 +41,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/survey" element={<SurveyFlow />} />
+        <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/charts" element={<ChartsPage />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} /> {/* Add this */}
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/results" element={<Result />} />
       </Routes>
     </Router>
   );

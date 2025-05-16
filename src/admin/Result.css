@@ -1,0 +1,33 @@
+.results-page {
+  padding: 20px;
+}
+
+.json-result {
+  margin-bottom: 30px;
+}
+
+.main-image-container {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.main-image-container img {
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(145, 123, 123, 0.2);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

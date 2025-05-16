@@ -14,7 +14,7 @@ const AdminLogin = ({ onAdminLogin }) => {
     if (username === "admin" && password === "admin123") {
       setStatus("Logging in as Admin...");
       setTimeout(() => {
-        onAdminLogin();
+        // onAdminLogin();
         navigate("/admin-dashboard");
       }, 1500);
     } else {
