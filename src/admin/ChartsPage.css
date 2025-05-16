@@ -1,0 +1,31 @@
+.charts-container {
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.charts-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .charts-container {
+    padding: 5px;
+    max-width: 100%;
+  }
+
+  .charts-title {
+    font-size: 20px;
+  }
+}
+.chart-box {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
