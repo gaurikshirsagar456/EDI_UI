@@ -1,5 +1,4 @@
-/* HomePage.css */
-
+/* General Styling (Web/Desktop First) */
 .homepage {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
@@ -13,6 +12,7 @@
   padding: 16px 48px;
   background-color: #6200ea;
   color: white;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -35,35 +35,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../../public/vote.jpg');  /* <-- background image here */
+  background-image: url('../../public/vote.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px;  /* adjust as needed */
+  height: 600px;
   color: white;
   padding: 100px 20px;
   text-align: center;
-  min-height: 400px; 
+  min-height: 400px;
   position: relative;
 }
 
-/* Optional: overlay for better text readability */
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5);  /* semi-transparent dark overlay */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;  /* to place text above the overlay */
+  z-index: 2;
   max-width: 700px;
   margin: 0 auto;
-}
-
-.hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,4 +171,48 @@
   color: white;
   border-radius: 5px;
   cursor: pointer;
+}
+
+
+/* ---------------------------- */
+/* 📱 Responsive Mobile Styles  */
+/* ---------------------------- */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+  }
+
+  .hero {
+    height: 400px; /* Reduced height for mobile */
+    padding: 60px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+  }
+
+  .login-nav-corner {
+    position: static;
+    margin-top: 10px;
+  }
 }
