@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f7f8fa, #eef2f3);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    height: 55px;
+    background: linear-gradient(to right, #5f72be, #9b23ea);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-title {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .login-container,
+  .thank-you-container,
+  .survey-container {
+    max-width: 700px;
+    margin: 3rem auto;
+    background: linear-gradient(145deg, #ffffff, #f2f3f5);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .survey-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .survey-title {
+    font-size: 1.6rem;
+    color: #4a00e0;
+  }
+  
+  .question-counter {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  input[type="text"], .dropdown, .textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 1rem 0;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s;
+  }
+  
+  .dropdown:focus, .textarea:focus, input:focus {
+    border: 2px solid #6c63ff;
+    outline: none;
+  }
+  
+  .textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .question {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  button.btn {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  button.btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+  }
+  
+  button.btn.submit {
+    background: linear-gradient(to right, #0fd850, #f9f047);
+    color: #111;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background: #ddd;
+    margin: 1rem 0 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    transition: width 0.4s ease;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .login-container button {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .login-container button:hover {
+    background: linear-gradient(to right, #185a9d, #43cea2);
+    transform: translateY(-2px);
+  }
+  
+  
