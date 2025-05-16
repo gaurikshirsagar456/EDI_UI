@@ -1,0 +1,106 @@
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px 20px 20px; /* Top padding adjusted */
+  background: linear-gradient(135deg, #e0e0e0, #fafafa);
+  min-height: 100vh;
+}
+
+.admin-login-box {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.admin-icon {
+  color: #6200ea;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.admin-login-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.admin-login-box form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.admin-login-box label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-align: left;
+  color: #444;
+}
+
+.admin-login-box input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding does not break layout */
+}
+
+.admin-login-box input:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+.admin-login-box button {
+  background: linear-gradient(to right, #7b1fa2, #512da8);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.admin-login-box button:hover {
+  background: linear-gradient(to right, #6a1b9a, #4527a0);
+}
+
+.status-text {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #6200ea;
+  min-height: 24px;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .admin-login-container {
+    padding-top: 60px;
+  }
+
+  .admin-login-box {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .admin-login-box h2 {
+    font-size: 20px;
+  }
+
+  .admin-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
