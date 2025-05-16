@@ -5,8 +5,13 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (voterId.trim()) {
-      onLogin(voterId.trim());
+    const trimmedId = voterId.trim();
+    const isValid = /^[a-zA-Z0-9]{10}$/.test(trimmedId);
+
+    if (isValid) {
+      onLogin(trimmedId);
+    } else {
+      alert("Voter ID must be exactly 10 alphanumeric characters.");
     }
   };
 
@@ -20,8 +25,11 @@ const Login = ({ onLogin }) => {
           id="voterId"
           value={voterId}
           onChange={(e) => setVoterId(e.target.value)}
-          placeholder="Voter Id"
+          placeholder="Voter ID"
           required
+          pattern="[a-zA-Z0-9]{10}"
+          maxLength={10}
+          title="Voter ID must be exactly 10 alphanumeric characters"
         />
         <button type="submit">Login</button>
       </form>
