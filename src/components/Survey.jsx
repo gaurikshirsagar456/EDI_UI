@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // ✅ import
 
-const Survey = ({ onSubmit }) => {
+const Survey = ({ voterId, onSubmit }) => {
   const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const navigate = useNavigate(); // ✅ setup
+  const [answers, setAnswers] = useState({ voter_id: voterId });
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/questions.json")
@@ -16,7 +16,6 @@ const Survey = ({ onSubmit }) => {
   const handleAnswer = (id, value) => {
     setAnswers((prev) => ({ ...prev, [id]: value }));
   };
-
   const currentQuestion = questions[current];
   const total = questions.length;
   const progress = ((current + 1) / total) * 100;
@@ -25,29 +24,20 @@ const Survey = ({ onSubmit }) => {
   const goBack = () => setCurrent((prev) => prev - 1);
 
   const handleFinalSubmit = () => {
-    console.log("User Answers:", answers);
-
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const updatedData = data.map((q) => {
-          if (answers[q.questionId]) {
-            const selected = answers[q.questionId];
-            return {
-              ...q,
-              options: q.options.map((opt) =>
-                opt.label === selected ? { ...opt, count: opt.count + 1 } : opt
-              )
-            };
-          }
-          return q;
-        });
-
-        console.log("Updated Data for Graph:", updatedData);
-        localStorage.setItem("graphData", JSON.stringify(updatedData));
-
-        // ✅ Navigate to charts page
-        navigate("/admin/charts");
+    // document.write(JSON.stringify(answers, null, 12));
+    fetch("http://localhost:5000/submit-survey", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(answers)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log("Saved:", data);
+      })
+      .catch(err => {
+        console.error("Error saving survey:", err);
       });
 
     onSubmit(); // optional, if still needed
