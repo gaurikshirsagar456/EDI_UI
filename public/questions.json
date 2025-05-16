@@ -1,0 +1,64 @@
+[
+    {
+      "id": 1,
+      "question": "What is this area like? ",
+      "options": ["Village", "Town", "Small City", "Big City","Metropolis"]
+    },
+    {
+      "id": 2,
+      "question": "In the next few weeks, assembly elections will be held in Madhya Pradesh. Will you vote in this election? ",
+      "options": ["Yes", "No", "May Be", "No Response"]
+    },
+    {
+      "id": 3,
+      "question": "If the Assembly elections were to be held tomorrow, who will you vote for? ",
+      "options": ["Congress /INC", "Bharatiya Janata Party /BJP", "Bahujan Samaj Party /BSP", "Communist Party of India-Marxist /CPI(M)","Aam Aadmi Party (AAP)","Samajvadi Party (SP)","Independent","NOTA","Others","No Response"]
+    },
+    {
+        "id": 4,
+        "question": "In the coming Assembly elections, what will be the single most important election issue for you? ",
+        "options": ["Unemployment","High prices/ Inflation", "Poverty", "Lack of development","Corruption","Farmer’s problems"]
+      },
+      {
+        "id": 5,
+        "question": "Are you satisfied or dissatisfied with the performance present MLA of your area?",
+         "options": ["Fully satisfied", "Somewhat satisfied", "Somewhat dissatisfied", "Fully dissatisfied","No Response"]
+
+          },
+          {
+            "id": 6,
+            "question": "While deciding who to vote for in the Assembly election, what will be the most important consideration for you – party, local candidate or chief ministerial candidate of the party? ",
+            "options": ["Party", "Local candidate", "CM candidate","Narendra Modi","Rahul Gandhi", "National leader","Other","No Response"]
+          },
+          {
+            "id": 7,
+            "question": "Are you satisfied or dissatisfied with the performance of the Narendra Modi led BJP Central government over the last nine and a half years? ",
+            "options": ["Fully satisfied", "Somewhat satisfied", "Somewhat dissatisfied", "Fully dissatisfied","No Response"]
+          },
+            {
+            "id": 8,
+            "question": "Parties often nominate central government ministers or MPs to contest in the Assembly elections. Is this right or wrong according to you? ",
+            "options": ["Right", "Wrong", "Don't Know"]
+          },
+            {
+            "id": 9,
+            "question": "Have you anyone in your family (a female member) benefitted from the of Ladli Behena Yojana? ",
+            "options": ["Yes", "No", "Don't Know", "Not Eligible"]
+          },
+            {
+            "id": 10,
+            "question": "What is your age? ",
+            "options": ["18-25 yrs ", " 26-35 yrs", "36-45 yrs", "46-55 yrs"," 56 yrs. and above"]
+          },
+            {
+            "id": 11,
+            "question": "Gender",
+            "options": ["Male", "Female", "Others"]
+          },
+            {
+            "id": 12,
+            "question": "What is your caste group? ",
+            "options": ["Scheduled Caste (SC)", "Scheduled Tribe (ST)", "Other Backward Classes (OBC)", "General"]
+          }
+  ]
+  
